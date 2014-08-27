@@ -67,6 +67,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 		return resolver;
 	}
+//    @Bean
+//    public InternalResourceViewResolver getInternalResourceViewResolver() {
+//        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+//        resolver.setPrefix(VIEW_RESOLVER_PREFIX);
+//        resolver.setSuffix(VIEW_RESOLVER_SUFFIX);
+//        return resolver;
+//    }
+	
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {

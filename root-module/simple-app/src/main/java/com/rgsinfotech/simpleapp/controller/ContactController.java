@@ -40,7 +40,7 @@ public class ContactController {
 
     protected static final String ADD_CONTACT_VIEW = "add";
     protected static final String CONTACT_VIEW = "view";
-    protected static final String HOME_VIEW = "list";
+    protected static final String HOME_VIEW = "index";
     protected static final String UPDATE_CONTACT_VIEW = "update";
 
     protected static final String MODEL_ATTRIBUTE_CONTACT = "contact";

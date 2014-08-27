@@ -1,16 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <head>
-    <script type="text/javascript" src="/static/js/contact.form.js"></script>
-    <script type="text/javascript" src="/static/js/contact.add.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/contact.form.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/contact.add.js"></script>
     <title></title>
 </head>
 <body>
 <h1><spring:message code="add.contact.title"/></h1>
 <form:errors path="contact" cssClass="errorBlock" element="div"/>
-<form:form action="/contact/add" cssClass="well" commandName="contact" method="POST">
+<form:form action="${ctx}/contact/add" cssClass="well" commandName="contact" method="POST">
     <div id="control-group-firstName" class="control-group">
         <label for="contact-firstName"><spring:message code="contact.label.firstName"/>:</label>
 

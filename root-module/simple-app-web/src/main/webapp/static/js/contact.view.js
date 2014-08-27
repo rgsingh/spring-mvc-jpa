@@ -1,5 +1,5 @@
 $(function() {
-
+	
     $(".well").on("click", "#delete-contact-link", function(e) {
         e.preventDefault();
 
@@ -18,14 +18,16 @@ $(function() {
     });
 
     $("#view-holder").on("click", "#delete-contact-button", function(e) {
-        e.preventDefault();
-
+    	e.preventDefault();
+    	
         $.ajax({
             type: "DELETE",
-            url: "/contact/" + $("#contact-id").text(),
+            url:  $("#delete-contact-button").data("context") + 
+            		"/contact/" +
+            		$("#delete-contact-button").data("contactid"),
             success: function(result) {
                 Contact.storeMessageToCache(result);
-                window.location.href = "/";
+                window.location.href = $("#delete-contact-button").data("context");
             }
         });
     });

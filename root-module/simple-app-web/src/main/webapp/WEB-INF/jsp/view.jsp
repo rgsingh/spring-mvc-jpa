@@ -2,9 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <head>
-    <script type="text/javascript" src="/static/js/contact.form.js"></script>
-    <script type="text/javascript" src="/static/js/contact.view.js"></script>
+    <!-- 
+    <script type="text/javascript" src="${ctx}/static/js/contact.form.js"></script>
+     -->
+    <script type="text/javascript" src="${ctx}/static/js/contact.view.js"></script>
     <title></title>
 </head>
 <body>
@@ -45,7 +48,7 @@
         </c:if>
     </address>
     <div>
-        <a href="/contact/update/${contact.id}" class="btn btn-primary"><spring:message
+        <a href="${ctx}/contact/update/${contact.id}" class="btn btn-primary"><spring:message
                 code="update.contact.button.label"/></a>
         <a id="delete-contact-link" class="btn btn-primary"><spring:message code="delete.contact.button.label"/></a>
     </div>
@@ -61,7 +64,7 @@
         </div>
         <div class="modal-footer">
             <a id="cancel-contact-button" href="#" class="btn"><spring:message code="cancel.label"/></a>
-            <a id="delete-contact-button" href="#" class="btn btn-primary"><spring:message code="delete.contact.button.label"/></a>
+            <a id="delete-contact-button" data-contactid="${contact.id}" data-context='${ctx}' href="#" class="btn btn-primary"><spring:message code="delete.contact.button.label"/></a>
         </div>
     </div>
 </script>

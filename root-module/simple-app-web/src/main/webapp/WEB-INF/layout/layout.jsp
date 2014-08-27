@@ -3,23 +3,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <head>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-responsive.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/styles.css"/>
 
-    <script type="text/javascript" src="/static/js/vendor/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/jquery-1.7.2.js"></script>
 
-    <script type="text/javascript" src="/static/js/vendor/json2.js"></script>
-    <script type="text/javascript" src="/static/js/vendor/amplify.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/json2.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/amplify.js"></script>
 
-    <script type="text/javascript" src="/static/js/vendor/bootstrap-transition.js"></script>
-    <script type="text/javascript" src="/static/js/vendor/bootstrap-alert.js"></script>
-    <script type="text/javascript" src="/static/js/vendor/bootstrap-collapse.js"></script>
-    <script type="text/javascript" src="/static/js/vendor/bootstrap-modal.js"></script>
-    <script type="text/javascript" src="/static/js/vendor/handlebars-1.0.0.beta.6.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/vendor/handlebars-1.0.0.beta.6.js"></script>
 
-    <script type="text/javascript" src="/static/js/contact.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/contact.js"></script>
 
     <sitemesh:write property="head"/>
 
